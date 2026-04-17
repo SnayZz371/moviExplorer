@@ -46,6 +46,29 @@ final class GlobalController extends AbstractController
         ]);
     }
     
+    #[Route('/films/{id}', name: 'film_detail')]
+    public function filmDetail(int $id): Response
+    {
+        return new Response("Film numéro : " . $id);
+    }
+
+    #[Route('/api/films', name: 'api_films', methods: ['GET'])]
+    public function apiFilms(): Response
+    {
+        $liste = [
+            ['id' => 1, 'title' => 'Inception', 'year' => 2010],
+            ['id' => 2, 'title' => 'The Matrix', 'year' => 1999],
+            ['id' => 3, 'title' => 'Interstellar', 'year' => 2014],
+            ['id' => 4, 'title' => 'The Dark Knight', 'year' => 2008],
+            ['id' => 5, 'title' => 'Pulp Fiction', 'year' => 1994],
+            ['id' => 6, 'title' => 'The Lord of the Rings: The Return of the King', 'year' => 2003],
+            ['id' => 7, 'title' => 'The Shawshank Redemption', 'year' => 1994],
+            ['id' => 8, 'title' => 'The Godfather', 'year' => 1972],
+            ['id' => 9, 'title' => 'The Godfather: Part II', 'year' => 1974],
+        ];
+
+        return $this->json($liste);
+    }
 }
 
 
