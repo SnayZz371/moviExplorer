@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Movie Explorer{% endblock %}
+
+{% block body %}
+    <h1>{{ title }}</h1>
+    <p>Voici la liste de tous les films disponibles sur Movie Explorer.</p>
+    <ul>
+        {% for list in liste %}
+            <li>{{ list.title }} ({{ list.year }})</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
