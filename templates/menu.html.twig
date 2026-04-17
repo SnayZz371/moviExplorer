@@ -1,8 +1,28 @@
 <div>
     <h1></h1>
-    <ul>
-        <li><a href="{{ path('index') }}">Accueil</a></li>
-        <li><a href="{{ path('liste') }}">Films</a></li>
-        <li><a href="{{ path('contact') }}">Contact</a></li>
+    <ul
+        class="bg-black text-white text-center flex justify-center space-x-4 py-4"
+    >
+        <li>
+            <a
+                class="flex items-center space-x-2 gap-2"
+                href="{{ path('index') }}"
+                >Accueil {{ ux_icon("bi:house-fill") }}</a
+            >
+        </li>
+        <li>
+            <a
+                class="flex items-center space-x-2 gap-2"
+                href="{{ path('liste') }}"
+                >Films {{ ux_icon("bi:card-checklist") }}</a
+            >
+        </li>
+        <li>
+            <a
+                class="flex items-center space-x-2 gap-2"
+                href="{{ path('contact') }}"
+                >Contact {{ ux_icon("bi:android") }}</a
+            >
+        </li>
     </ul>
 </div>

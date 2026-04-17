@@ -3,9 +3,9 @@
 {% block title %}Movie Explorer{% endblock %}
 
 {% block body %}
-    <h1>{{ title }}</h1>
-    <p>Voici la liste de tous les films disponibles sur Movie Explorer.</p>
-    <ul>
+    <h1 class="text-center mt-10 font-bold text-3xl"><strong>{{ title }}</strong></h1>
+    <p class="text-center mt-5">Voici la liste de tous les films disponibles sur Movie Explorer.</p>
+    <ul class="text-center mt-5">
         {% for list in liste %}
             <li>{{ list.title }} ({{ list.year }})</li>
         {% endfor %}
